@@ -1,5 +1,6 @@
-from CalculoSistemasLineares.calculo import Calculo
-#import Calculo
+from calculo import Calculo
+import os
 
 if __name__ == "__main__":
-    pass
+    os.system('clear')
+    Calculo.funcao()
