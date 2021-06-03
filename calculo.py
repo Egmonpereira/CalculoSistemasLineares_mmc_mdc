@@ -1,3 +1,40 @@
+import numpy
+import numpy as np
+from numpy.core.arrayprint import DatetimeFormat
+
 class Calculo():
-    def funcao():
+    def funcao(Matriz,Termos):
+        Deter = []
+        aux = []
+
+        #Calcula o Determinante dos Coeficientes
+        for i in range(len(Matriz)):
+            for j in range(len(Matriz[0])):
+                D = numpy.linalg.det(Matriz)
         
+        Deter.append(numpy.linalg.det(Matriz))
+        if Deter[0] != 0:
+            #Calcula o Determinante das Colunas x1, ... xn
+            print("Coeficientes =",Matriz)
+            print("Termos independentes =", Termos)
+            t = 0
+            for i in range(len(Matriz)):
+                for j in range(len(Matriz[0])):
+                    if t == j:
+                        aux.append(Termos)
+                    else:
+                        aux.append(Matriz[j])
+                        
+                Deter.append(numpy.linalg.det(aux))
+                t = t + 1
+                aux.clear()
+
+            print("Valores Reais:")
+            for i in range(len(Matriz)):
+                print("X",i+1," =", Deter[i+1]/Deter[0])
+
+            print("Valores Arredondados")
+            for i in range(len(Matriz)):
+                print("X",i+1," =", "%.0f" %round(Deter[i+1]/Deter[0],0))
+        else:
+            print('Sistema Indeterminado ou Impossível')

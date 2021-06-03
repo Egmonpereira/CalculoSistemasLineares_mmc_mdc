@@ -1,6 +1,6 @@
-from calculo import Calculo
+from entrada import Entrada
 import os
 
 if __name__ == "__main__":
     os.system('clear')
-    Calculo.funcao()
+    Entrada.entradas()
