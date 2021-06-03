@@ -6,11 +6,6 @@ class Calculo():
         Deter = []
         aux = []
 
-        #Calcula o Determinante dos Coeficientes
-        for i in range(len(Matriz)):
-            for j in range(len(Matriz[0])):
-                D = numpy.linalg.det(Matriz)
-        
         Deter.append(numpy.linalg.det(Matriz))
         if Deter[0] != 0:
             #Calcula o Determinante das Colunas x1, ... xn

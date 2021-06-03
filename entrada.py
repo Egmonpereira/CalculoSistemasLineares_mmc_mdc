@@ -1,6 +1,5 @@
 from CalculoSistemasLineares.calculo import Calculo
 
-
 class Entrada():
     def entradas():
         Matriz = []
