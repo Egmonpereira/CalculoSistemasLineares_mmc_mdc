@@ -1,6 +1,5 @@
 import numpy
 import numpy as np
-from numpy.core.arrayprint import DatetimeFormat
 
 class Calculo():
     def funcao(Matriz,Termos):
@@ -31,10 +30,6 @@ class Calculo():
 
             print("Valores Reais:")
             for i in range(len(Matriz)):
-                print("X",i+1," =", Deter[i+1]/Deter[0])
-
-            print("Valores Arredondados")
-            for i in range(len(Matriz)):
-                print("X",i+1," =", "%.0f" %round(Deter[i+1]/Deter[0],0))
+                print("X",i+1," =", round(Deter[i+1]/Deter[0],2))
         else:
             print('Sistema Indeterminado ou Impossível')

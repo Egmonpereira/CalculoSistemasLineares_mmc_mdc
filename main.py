@@ -1,4 +1,5 @@
-from entrada import Entrada
+#import Entrada
+from CalculoSistemasLineares.entrada import Entrada
 import os
 
 if __name__ == "__main__":
