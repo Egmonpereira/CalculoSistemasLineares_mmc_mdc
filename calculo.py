@@ -1,5 +1,6 @@
 import numpy
 import numpy as np
+import pandas as pd
 
 class Calculo():
     def funcao(Matriz,Termos):
