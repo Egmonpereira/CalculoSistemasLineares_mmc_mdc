@@ -1,4 +1,4 @@
-from CalculoSistemasLineares.calculo import Calculo
+from calculo import Calculo
 
 class Entrada():
     def entradas():

@@ -1,6 +1,4 @@
 import numpy
-import numpy as np
-import pandas as pd
 
 class Calculo():
     def funcao(Matriz,Termos):
@@ -26,6 +24,6 @@ class Calculo():
 
             print("Valores Reais:")
             for i in range(len(Matriz)):
-                print("X",i+1," =", round(Deter[i+1]/Deter[0],2))
+                print("X(",i+1,") =", round(Deter[i+1]/Deter[0],2))
         else:
             print('Sistema Indeterminado ou Impossível')
