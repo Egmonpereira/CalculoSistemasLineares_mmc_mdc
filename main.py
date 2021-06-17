@@ -8,7 +8,7 @@ if __name__ == "__main__":
     s = 's'#input("Resolver Sistema Linear? [S/N]: ")
     if s == 's' or s == 'S':
         Entrada.entradas()
-    s = "n"#input("\nCalcular MMC e MDC? [S/N]: ")
+    s = 'n'#input("\nCalcular MMC e MDC? [S/N]: ")
     if s == 's' or s == 'S':
         n = input("Digite 2 números inteiros: ").split(" ")
         print("MMC",n,'=',MMC_MDC.mmc(n))

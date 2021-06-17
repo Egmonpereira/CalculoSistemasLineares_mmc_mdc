@@ -6,15 +6,26 @@ class Calculo():
     def funcao(Matriz,Termos):
         Deter = []
         aux = []
-        df = pd.DataFrame(Matriz)
+        temp = []
+        temp1 = []
+        for i in range(len(Matriz)):
+            s = str(i+1)
+            temp.append("X"+s+" =")
+            temp1.append(" ")
 
         Deter.append(numpy.linalg.det(Matriz))
         if Deter[0] != 0:
-            #Calcula o Determinante das Colunas x1, ... xn
             print("\nCoeficientes:")
-            print(pd.DataFrame(Matriz, columns=[" "," "], index=["X1 =","X2 ="]))
+            print(pd.DataFrame(Matriz, columns=[temp1], index=[temp]))
+            temp.clear()
+            temp1.clear()
+
+            for i in range(len(Termos)):
+                s = str(i+1)
+                temp.append("T"+s+" =")
+
             print("\nTermos independentes:")
-            print(pd.DataFrame(Termos, columns=[" "], index=["T1 =","T2 ="]))
+            print(pd.DataFrame(Termos, columns=[" "], index=[temp]))
 
             t = 0
             for i in range(len(Matriz)):
