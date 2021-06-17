@@ -10,6 +10,7 @@ class Entrada():
             print("Entre com todos os índeces da",i+1,"ª variável:")
             linha = []
             for j in range(n):
+                print("X",i+1,"= ",end="")
                 t = float(input())
                 linha.append(t)
             dados.append(linha)
